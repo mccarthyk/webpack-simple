@@ -6,7 +6,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'build.js'
+    filename: 'build.js',
+    libraryTarget: 'umd'
   },
   module: {
     rules: [
@@ -81,7 +82,17 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
     noInfo: true,
-    overlay: true
+    overlay: true,
+    proxy: {
+      // '/api': {
+      //   target: 'http://localhost:3000',
+      //   changeOrigin: true,
+      //   pathRewrite: {
+      //     '^/api': ''
+      //   }
+      // }
+    }
+
   },
   performance: {
     hints: false
