@@ -12,23 +12,22 @@
 </head>
 <body>
 
-  <div id="hc-main">
+  <div id="hc-main" class="d-flex flex-column">
+    <header>
+      <!-- https://www.w3.org/WAI/GL/2016/WD-WCAG20-TECHS-20160105/G1 -->
+      <nav is="hc-navigation" logo-href="./" skip-content-link="#main-content"></nav>
 
-    <!-- https://www.w3.org/WAI/GL/2016/WD-WCAG20-TECHS-20160105/G1 -->
-    <nav is="hc-navigation" logo-href="./" skip-content-link="#main-content"></nav>
+      <ol is="hc-banner" title="{{ name }}">
+        <!-- ancestors -->
+        <li class="breadcrumb-item"><a href="./">Home</a></li>
+      </ol>
+    </header>
 
-
-    <ol is="hc-banner" title="Page Title">
-      <!-- ancestors -->
-      <li class="breadcrumb-item"><a href="./">Home</a></li>
-    </ol>
-
-    <div id="main-content">
+    <main id="main-content">
       <div id="app"></div>
-    </div>
+    </main>
 
-    <footer is="hc-footer"></footer>
-
+    <footer is="hc-footer" class="mt-auto"></footer>
   </div>
 
   <!-- Optional JavaScript -->

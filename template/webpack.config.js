@@ -84,15 +84,15 @@ module.exports = {
     noInfo: true,
     overlay: true,
     proxy: {
-      // '/api': {
-      //   target: 'http://localhost:3000',
-      //   changeOrigin: true,
-      //   pathRewrite: {
-      //     '^/api': ''
-      //   }
-      // }
+      '/apis': {
+        target: 'https://hillsborough/apis',
+        changeOrigin: true,
+        secure: false,
+        pathRewrite: {
+          '^/apis': ''
+        }
+      }
     }
-
   },
   performance: {
     hints: false
